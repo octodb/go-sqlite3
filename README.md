@@ -7,9 +7,7 @@ go-sqlite3
 [![codecov](https://codecov.io/gh/mattn/go-sqlite3/branch/master/graph/badge.svg)](https://codecov.io/gh/mattn/go-sqlite3)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mattn/go-sqlite3)](https://goreportcard.com/report/github.com/mattn/go-sqlite3)
 
-Latest stable version is v1.14 or later not v2.
-
-~~**NOTE:** The increase to v2 was an accident. There were no major changes or features.~~
+Latest version is v2.0.0
 
 # Description
 
@@ -66,11 +64,11 @@ Supported Golang version: See [.github/workflows/go.yaml](./.github/workflows/go
 
 This package can be installed with the go get command:
 
-    go get github.com/mattn/go-sqlite3
+    go get github.com/octodb/go-sqlite3
 
 _go-sqlite3_ is *cgo* package.
 If you want to build your app using go-sqlite3, you need gcc.
-However, after you have built and installed _go-sqlite3_ with `go install github.com/mattn/go-sqlite3` (which requires gcc), you can build your app without relying on gcc in future.
+However, after you have built and installed _go-sqlite3_ with `go install github.com/octodb/go-sqlite3` (which requires gcc), you can build your app without relying on gcc in future.
 
 ***Important: because this is a `CGO` enabled package you are required to set the environment variable `CGO_ENABLED=1` and have a `gcc` compile present within your path.***
 
@@ -242,12 +240,6 @@ To compile under linux use the build tag `linux`.
 go build --tags "linux"
 ```
 
-If you wish to link directly to libsqlite3 then you can use the `libsqlite3` build tag.
-
-```
-go build --tags "libsqlite3 linux"
-```
-
 ### Alpine
 
 When building in an `alpine` container run the following command before building.
@@ -292,12 +284,6 @@ To compile for Mac OSX.
 go build --tags "darwin"
 ```
 
-If you wish to link directly to libsqlite3 then you can use the `libsqlite3` build tag.
-
-```
-go build --tags "libsqlite3 darwin"
-```
-
 Additional information:
 - [#206](https://github.com/mattn/go-sqlite3/issues/206)
 - [#404](https://github.com/mattn/go-sqlite3/issues/404)
@@ -333,14 +319,14 @@ For example the TDM-GCC Toolchain can be found [here](https://sourceforge.net/pr
     > Probably, you are using go 1.0, go1.0 has a problem when it comes to compiling/linking on windows 64bit.
     > See: [#27](https://github.com/mattn/go-sqlite3/issues/27)
 
-- `go get github.com/mattn/go-sqlite3` throws compilation error.
+- `go get github.com/octodb/go-sqlite3` throws compilation error.
 
     `gcc` throws: `internal compiler error`
 
     Remove the download repository from your disk and try re-install with:
 
     ```bash
-    go install github.com/mattn/go-sqlite3
+    go install github.com/octodb/go-sqlite3
     ```
 
 # User Authentication
